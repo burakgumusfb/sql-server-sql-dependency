@@ -32,6 +32,20 @@ namespace Microsft.SqlServer.SqlDependency
 
         private static void SqlDep_OnChange(object sender, SqlNotificationEventArgs e)
         {
+            if (e.Info == SqlNotificationInfo.Insert)
+            {
+                if (e.Info == SqlNotificationInfo.Update)
+                {
+                    if (e.Info == SqlNotificationInfo.Delete)
+                    {
+                        if (e.Info == SqlNotificationInfo.Alter)
+                        {
+
+                        }
+                    }
+                }
+            }
+
             ReadMessages();
         }
     }
